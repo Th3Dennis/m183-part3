@@ -20,3 +20,7 @@
 body {
     background-color: B5B5B5;
 }
+
+textarea {
+    resize: none;
+}
