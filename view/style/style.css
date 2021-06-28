@@ -24,3 +24,8 @@ body {
 textarea {
     resize: none;
 }
+
+.tableContainer{
+    background-color: white;
+    padding-top: 5%;
+}
