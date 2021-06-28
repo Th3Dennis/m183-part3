@@ -1,0 +1,18 @@
+.btn-space-right {
+    margin-right: 1%;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #intro {
+        margin-top: -58.59px;
+    }
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.card-bg-grey {
+    background-color: B5B5B5;
+}
