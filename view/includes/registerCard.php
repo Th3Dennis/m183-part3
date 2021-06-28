@@ -6,7 +6,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
-                        <form class="bg-white  rounded-5 shadow-5-strong p-5" action="login.html" method="post">
+                        <form class="bg-white  rounded-5 shadow-5-strong p-5" action="login.php" method="post">
                             <legend>Register</legend>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
