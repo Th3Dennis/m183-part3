@@ -1,10 +1,12 @@
+<br>
+<br>
 <div class="registerModal">
     <div id="intro" class="bg-image shadow-2-strong">
         <div class="mask d-flex align-items-center h-100 card-bg-grey" ;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
-                        <form class="bg-white  rounded-5 shadow-5-strong p-5">
+                        <form class="bg-white  rounded-5 shadow-5-strong p-5" action="login.html" method="post">
                             <legend>Register</legend>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
