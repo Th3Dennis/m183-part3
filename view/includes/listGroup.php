@@ -1,5 +1,18 @@
+<?php
+
+require "./model/jobService.php";
+
+$jobService = new jobService();
+$allJobs = $jobService->getJobsList();
+?>
+
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+
+  <?php foreach($allJobs as $job): ?>
+
+  <a href=<?= "/detailPage.php?id=" . $job->id?> class="list-group-item list-group-item-action"><?= $job->name ?></a>
+
+
+<?php endforeach; ?>
+
 </div>

@@ -1,6 +1,6 @@
 <?php
 
-include_once("./model/jobs.php");
+include_once("./model/job.php");
 
 class jobService {
 
