@@ -1,15 +1,5 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Job</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><a></a></th>
-    </tr>
-    <tr>
-      <th scope="row">Cutting the grass</th>
-    </tr>
-  </tbody>
-</table>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+</div>

@@ -14,18 +14,19 @@
 }
 
 .card-bg-grey {
-    background-color: B5B5B5;
+    background-color: #B5B5B5;
 }
 
-body {
-    background-color: B5B5B5;
+.form-control{
+    background-color: #E2E2E9;
 }
 
 textarea {
     resize: none;
 }
 
-.tableContainer{
+.listGroupOverview{
     background-color: white;
-    padding-top: 5%;
+    padding-top: 10%;
+    
 }

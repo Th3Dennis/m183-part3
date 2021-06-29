@@ -1,5 +1,5 @@
 <html>
-<?php require "./view/includes/head.php" ?>
+<?php require "./view/includes/headGrey.php" ?>
 
 <body>
     <?php require "./view/includes/navbarLogin.php" ?>
