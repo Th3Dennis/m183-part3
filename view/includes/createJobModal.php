@@ -1,4 +1,4 @@
-<div class="modal-dialog createJobModal">
+<div class="modal-dialog modal-dialog-centered createJobModal">
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Create Job</h5>
