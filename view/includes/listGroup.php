@@ -12,7 +12,7 @@ $allJobs = $jobService->getJobsList();
 
     <?php if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']) :   ?>
 
-      <a href=<?= "/detailPage.php?id=" . $job->id ?> class="list-group-item list-group-item-action"><?= $job->name ?></a>
+      <a href=<?= "./detailPage.php?id=" . $job->id ?> class="list-group-item list-group-item-action"><?= $job->name ?></a>
     
     <?php else : ?>
 
