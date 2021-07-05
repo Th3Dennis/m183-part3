@@ -5,6 +5,7 @@
 
 <body>
     <?php require "./view/includes/navbarLogout.php" ?>
+    <?php require "./view/includes/detailComponent.php" ?>
     
     <?php require "./view/includes/footer.php" ?>
 </body>

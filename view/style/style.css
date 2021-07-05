@@ -17,7 +17,7 @@
     background-color: #B5B5B5;
 }
 
-.form-control{
+.form-control {
     background-color: #E2E2E9;
 }
 
@@ -25,8 +25,20 @@ textarea {
     resize: none;
 }
 
-.listGroupOverview{
+.listGroupOverview {
     background-color: white;
     padding-top: 10%;
-    
+
+}
+
+.detailComponent {
+    margin-top: 7rem;
+}
+
+.bg-light {
+    border: none;
+}
+
+.btn-right {
+    text-align: right;
 }
