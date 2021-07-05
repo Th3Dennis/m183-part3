@@ -8,13 +8,13 @@
                             <legend>Login</legend>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form1Example1" class="form-control" />
+                                <input type="email" id="form1Example1" class="form-control" required/>
                                 <label class="form-label" for="form1Example1">Email Address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="Password" class="form-control" />
+                                <input type="password" id="Password" class="form-control" required/>
                                 <label class="form-label" for="Password">Password</label>
                             </div>
 
