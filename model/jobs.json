@@ -42,8 +42,8 @@
      },
      {
          "id": "2",
-          "name": "Cutting the grass",
-          "details": "I need someone to cut my lawn on my balcony, because i don't have the time for it.",
+          "name": "Cleaning the house",
+          "details": "I need someone to clean my house, because i don't have the time for it.",
           "dateAndTime": "Every Saturday at 2pm until end",
           "salaryPerHour": "12$",
           "jobProvider": "Nikolai Schunk"

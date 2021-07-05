@@ -11,7 +11,7 @@
                         <a class="nav-link active" aria-current="page" href="./overview.php">Overview</a>
                     </li>
                 </ul>
-                <a href="./index.php"><button class="btn btn-outline-light" type="button">Logout</button></a>
+                <a href="./controller/logoutController.php"><button class="btn btn-outline-light" type="button">Logout</button></a>
             </div>
         </div>
     </nav>
