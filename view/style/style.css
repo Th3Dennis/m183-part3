@@ -21,7 +21,7 @@
     background-color: #E2E2E9;
 }
 
-textarea {
+.jobDetails textarea {
     resize: none;
 }
 
@@ -42,6 +42,10 @@ textarea {
 .btn-right {
     text-align: right;
 }
-.list-group{
+
+.list-group {
     margin-top: 1rem;
+}
+.detail-spacing {
+    margin-bottom: 1rem;
 }
