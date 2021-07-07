@@ -25,7 +25,7 @@
                 }
             } else { ?>
 
-    </div>";
+    </div>
 <?php
             }
             require "./view/includes/listGroup.php";
