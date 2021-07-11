@@ -1,3 +1,11 @@
+<?php
+
+require "./controller/jobService.php";
+
+$jobService = new jobService();
+$job = $jobService->getJob($_REQUEST['id']);
+?>
+
 <div class="detailComponent">
     <div id="intro" class="bg-image shadow-2-strong">
         <div class="mask d-flex align-items-center h-100 card bg-light" ;">
