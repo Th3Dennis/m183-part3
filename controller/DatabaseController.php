@@ -89,4 +89,14 @@ function getProductById($id)
 
 }
 
+function acceptJob($jobId, $userEmail){
+
+    $conn = db_connect();
+    $sql = "UPDATE job SET jobAceptor=$userEmail WHERE id=$jobId";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    $result = $conn->query($sql);
+}
+
 ?>

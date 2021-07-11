@@ -17,4 +17,8 @@ class jobService {
 
 		return getProductById($id);
 	}
+
+	public function acceptJobWithEmail($jobId, $userEmail){
+		acceptJob($jobId, $userEmail);
+	}
 }
