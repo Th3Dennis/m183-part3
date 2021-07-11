@@ -22,7 +22,7 @@
                             <div class="row mb-4">
                                 <div class="col">
                                     <!-- Simple link -->
-                                    <a>Don't have an account yet? <a href="./register.php">Sign Up</a></a>
+                                    <a>Don't have an account yet?</a><a href="./register.php">Sign Up</a>
                                 </div>
 
                             </div>

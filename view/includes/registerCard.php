@@ -39,7 +39,7 @@ if (isset($_REQUEST['email'])) {
                             <div class="row mb-4">
                                 <div class="col">
                                     <!-- Simple link -->
-                                    <a>Already have an account? <a href="./login.php">Login</a></div>
+                                    <a>Already have an account? </a><a href="./login.php">Login</a>
                                 </div>
                             </div>
                             <!-- Submit button -->
