@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../model/Database.php';
 
 function getProducts()
@@ -44,7 +44,7 @@ function register($email, $password)
         // output data of each row
         foreach ($result as $row) {
             if ($row['email'] == $email) {
-                $_SESSION['errorMessage'] = 'Email nicht verfügbar';
+                $_SESSION['errorMessage'] = (string) new Toast(3);
                 return false;
             }
         }
