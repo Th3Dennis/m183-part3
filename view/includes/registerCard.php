@@ -1,23 +1,32 @@
 <br>
 <br>
+
+<?php
+$email = '';
+if (isset($_REQUEST['email'])) {
+    $email = $_REQUEST['email'];
+}
+?>
 <div class="registerModal">
     <div id="intro" class="bg-image shadow-2-strong">
         <div class="mask d-flex align-items-center h-100 card-bg-grey" ;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
-                        <form class="bg-white  rounded-5 shadow-5-strong p-5" action="login.php" method="post">
+                        <form class="bg-white  rounded-5 shadow-5-strong p-5" action="./controller/registerController.php" method="post">
                             <legend>Register</legend>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form1Example1" class="form-control" required />
-                                <label class="form-label" for="form1Example1">Email address</label>
+                                <input type="email" id="EmailField" class="form-control" name="email" value="<?= htmlspecialchars(
+                                    $email
+                                ) ?>" required />
+                                <label class="form-label" for="EmailField">Email address</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="form1Example2" class="form-control" required/>
-                                <label class="form-label" for="form1Example2">Password</label>
+                                <input type="password" id="PasswordField" class="form-control" name="passwordConfirm" required/>
+                                <label class="form-label" for="PasswordField">Password</label>
                             </div>
 
                             <!-- Repeat Password input -->
@@ -30,7 +39,7 @@
                             <div class="row mb-4">
                                 <div class="col">
                                     <!-- Simple link -->
-                                    <a>Already have an account? <a href="./login.php">Login</a></a </div>
+                                    <a>Already have an account? <a href="./login.php">Login</a></div>
                                 </div>
                             </div>
                             <!-- Submit button -->
