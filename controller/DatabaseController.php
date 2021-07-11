@@ -1,12 +1,14 @@
 <?php
-
-include '../model/Database.php';
+include "./model/Database.php";
 
 function getProducts()
 {
+
     $conn = db_connect();
-    $sql = 'SELECT * FROM job';
-    $result = $conn->query($sql);
+
+    $sql = "SELECT * FROM job";
+
+    $result = $conn->query($sql) ->fetch_all(MYSQLI_ASSOC);
 
     return $result;
 }
@@ -37,6 +39,7 @@ function register($email, $password)
 {
     $conn = db_connect();
     $sql = 'SELECT * from user';
+
 
     $result = $conn->query($sql);
 
@@ -70,6 +73,30 @@ function register($email, $password)
 
     $conn->close();
     return true;
+}
+
+
+function getProductById($id)
+{
+    $conn = db_connect();
+    $sql = "SELECT * from job where id = $id";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    $result = $conn->query($sql);
+
+    return mysqli_fetch_array($result);
+
+}
+
+function acceptJob($jobId, $userEmail){
+
+    $conn = db_connect();
+    $sql = "UPDATE job SET jobAceptor=$userEmail WHERE id=$jobId";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    $result = $conn->query($sql);
 }
 
 ?>
