@@ -25,13 +25,13 @@ if (isset($_REQUEST['email'])) {
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="PasswordField" class="form-control" name="passwordConfirm" required/>
+                                <input type="password" id="PasswordField" class="form-control" name="password" required/>
                                 <label class="form-label" for="PasswordField">Password</label>
                             </div>
 
                             <!-- Repeat Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="repeatPassword" class="form-control" required/>
+                                <input type="password" id="repeatPassword" class="form-control" name="passwordConfirm" required/>
                                 <label class="form-label" for="repeatPassword">Repeat Password</label>
                             </div>
 

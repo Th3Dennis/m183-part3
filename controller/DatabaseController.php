@@ -1,5 +1,9 @@
 <?php
-include "./model/Database.php";
+if(file_exists("../model/Database.php")){
+    include "../model/Database.php";
+} else if(file_exists("./model/Database.php")){
+    include "./model/Database.php";
+}
 
 function getProducts()
 {

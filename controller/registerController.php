@@ -11,6 +11,7 @@ if (
     if ($_REQUEST['password'] == $_REQUEST['passwordConfirm']) {
         if (register($_REQUEST['email'], $_REQUEST['password'])) {
             $_SESSION['email'] = $_REQUEST['email'];
+            $_SESSION['errorMessage'] = '';
             header('Location: ../Login.php');
         } else {
             header('Location: ../Login.php');
