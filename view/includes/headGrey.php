@@ -9,4 +9,5 @@ session_start()
     <link rel="stylesheet" href="./view/style/bootstrap.min.css">
     <link rel="stylesheet" href="./view/style/style.css">
     <link rel="stylesheet" href="./view/style/greyStyle.css">
+
 </head>

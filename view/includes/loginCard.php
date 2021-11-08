@@ -4,7 +4,9 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
+
                         <form class="bg-white  rounded-5 shadow-5-strong p-5" action="./controller/loginController.php" method="post">
+
                         <p><?= isset($_SESSION['errorMessage']) ? $_SESSION["errorMessage"] : "" ?></p>    
                         <legend>Login</legend>
                             <!-- Email input -->
@@ -27,12 +29,18 @@
                                 </div>
 
                             </div>
+
+                            <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LejByAdAAAAAIM62RgQ_1nWr649JC5S077z7EE5"></div>
+
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>

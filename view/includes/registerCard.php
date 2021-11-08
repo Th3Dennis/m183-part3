@@ -36,6 +36,9 @@ if (isset($_REQUEST['email'])) {
                                 <label class="form-label" for="repeatPassword">Repeat Password</label>
                             </div>
 
+                            <div class="g-recaptcha brochure__form__captcha" data-sitekey="6LejByAdAAAAAIM62RgQ_1nWr649JC5S077z7EE5"></div>
+
+
                             <!-- 2 column grid layout for inline styling -->
                             <div class="row mb-4">
                                 <div class="col">
@@ -52,3 +55,5 @@ if (isset($_REQUEST['email'])) {
         </div>
     </div>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
