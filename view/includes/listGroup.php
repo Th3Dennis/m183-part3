@@ -16,7 +16,7 @@ $allJobs = $jobService->getJobsList();
 
     <?php else : ?>
 
-      <a href="#" class="list-group-item list-group-item-action " data-bs-toggle="tooltip" data-bs-placement="top" title="You need to login to see details"><?= $job['name'] ?></a>
+      <a href="#" class="list-group-item list-group-item-action " data-bs-toggle="tooltip" data-bs-placement="top" title="You need to login to see details"><?= htmlspecialchars($job['name']) ?></a>
 
 
     <?php endif; ?>
