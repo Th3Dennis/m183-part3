@@ -5,7 +5,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
                         <form class="bg-white  rounded-5 shadow-5-strong p-5" action="./controller/loginController.php" method="post">
-                        <p><?= isset($_SESSION['errorMessage']) ? $_SESSION["errorMessage"] : "" ?></p>    
+                        <p><?= isset($_SESSION['loginErrorMessage']) ? $_SESSION["loginErrorMessage"] : "" ?></p>    
                         <legend>Login</legend>
                             <!-- Email input -->
                             <div class="form-outline mb-4">

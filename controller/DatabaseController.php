@@ -1,7 +1,7 @@
 <?php
-if(file_exists("../model/Database.php")){
+if (file_exists("../model/Database.php")) {
     include "../model/Database.php";
-} else if(file_exists("./model/Database.php")){
+} else if (file_exists("./model/Database.php")) {
     include "./model/Database.php";
 }
 
@@ -12,7 +12,7 @@ function getProducts()
 
     $sql = "SELECT * FROM job";
 
-    $result = $conn->query($sql) ->fetch_all(MYSQLI_ASSOC);
+    $result = $conn->query($sql)->fetch_all(MYSQLI_ASSOC);
 
     return $result;
 }
@@ -20,41 +20,32 @@ function getProducts()
 function verifyLogin($email, $password)
 {
     $conn = db_connect();
-    $sql = 'SELECT * from user';
-
+    $sql = "SELECT * FROM user WHERE email='$email'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // output data of each row
-        foreach ($result as $row) {
-            if ($row['email'] == $email) {
-                if (password_verify($password, $row['password'])) {
-                    return true;
-                }
-            }
-        }
+    if ($result->num_rows == 0) {
+        return false;
+    }
+    $user = $result->fetch_assoc();
+    if (password_verify($password, $user['password'])) {
+        return true;
     }
 
     $conn->close();
     return false;
 }
 
+
 function register($email, $password)
 {
     $conn = db_connect();
-    $sql = 'SELECT * from user';
-
+    $sql = "SELECT * from user WHERE email='$email'";
 
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // output data of each row
-        foreach ($result as $row) {
-            if ($row['email'] == $email) {
-                $_SESSION['errorMessage'] = 'Email already exists';
-                return false;
-            }
-        }
+        $_SESSION['registerErrorMessage'] = 'Email already exists';
+        return false;
     }
 
     $sql = 'INSERT INTO user(email, password) VALUES (?, ?)';
@@ -85,22 +76,17 @@ function getProductById($id)
     $conn = db_connect();
     $sql = "SELECT * from job where id = $id";
 
-    $stmt = mysqli_prepare($conn, $sql);
-
     $result = $conn->query($sql);
 
     return mysqli_fetch_array($result);
-
 }
 
-function acceptJob($jobId, $userEmail){
+function acceptJob($jobId, $userEmail)
+{
 
     $conn = db_connect();
     $sql = "UPDATE job SET jobAceptor=$userEmail WHERE id=$jobId";
 
-    $stmt = mysqli_prepare($conn, $sql);
-
     $result = $conn->query($sql);
+    return mysqli_fetch_array($result);
 }
-
-?>

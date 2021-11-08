@@ -11,16 +11,16 @@ if (
     if ($_REQUEST['password'] == $_REQUEST['passwordConfirm']) {
         if (register($_REQUEST['email'], $_REQUEST['password'])) {
             $_SESSION['email'] = $_REQUEST['email'];
-            $_SESSION['errorMessage'] = '';
-            header('Location: ../Login.php');
+            $_SESSION['registerErrorMessage'] = '';
+            header('Location: ../overview.php');
         } else {
-            header('Location: ../Login.php');
+            header('Location: ../Register.php');
         }
     } else {
-        $_SESSION['errorMessage'] = 'Passwörter stimmen nicht überein';
+        $_SESSION['registerErrorMessage'] = 'Passwords doesnt match';
         header('Location: ../Register.php?email=' . $_REQUEST['email']);
     }
 } else {
-    $_SESSION['errorMessage'] = 'Mehr Parameter benötigt';
+    $_SESSION['registerErrorMessage'] = 'More Parameter required';
     header('Location: ../Register.php?email=' . $_REQUEST['email']);
 }
