@@ -21,23 +21,22 @@ if (!$res['success']) {
 
     $html_Output = null;
 
-    $_SESSION['errorMessage'] = "";
-
+$_SESSION['loginErrorMessage'] = "";
 
 // Prüfe Inhalt von Eingabe  
-    if (isset($email) && isset($password)) {
-        if (verifyLogin($email, $password)) {
-            $_SESSION['email'] = $email;
-            $_SESSION['loggedIn'] = true;
-            header("Location: ../Overview.php");
-        } else {
-            $_SESSION['errorMessage'] = "E-Mail oder Passwort falsch.";
-            header("Location: ../login.php");
-        }
+if (isset($email) && isset($password)) {
+    if (verifyLogin($email, $password)) {
+        $_SESSION['email'] = $email;
+        $_SESSION['loggedIn'] = true;
+        header("Location: ../Overview.php");
     } else {
-        $_SESSION['errorMessage'] = "E-Mail oder Passwort falsch.";
+        $_SESSION['loginErrorMessage'] = "E-Mail oder Passwort falsch.";
         header("Location: ../login.php");
     }
+} else {
+    $_SESSION['loginErrorMessage'] = "E-Mail oder Passwort falsch.";
+    header("Location: ../login.php");
+}
 }
 
 
