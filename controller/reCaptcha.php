@@ -3,7 +3,7 @@
 function reCaptcha($recaptcha)
 {
     $secret = "6LejByAdAAAAAPy0WVGCXMBFuiZWMxYFEZ1xxF9p";
-    $ip = $_SERVER['th3dennis.ch'];
+    $ip = $_SERVER['localhost'];
 
     $postvars = array("secret" => $secret, "response" => $recaptcha, "remoteip" => $ip);
     $url = "https://www.google.com/recaptcha/api/siteverify";

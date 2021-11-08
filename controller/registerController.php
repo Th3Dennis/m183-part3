@@ -11,6 +11,8 @@ if (!$res['success']) {
     header("Location: ../Register.php");
 } else {
 
+    require "./DatabaseController.php";
+
 if (
     isset($_REQUEST['email']) &&
     isset($_REQUEST['password']) &&
