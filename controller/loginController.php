@@ -15,6 +15,7 @@ if (!$res['success']) {
 
     $email = $_REQUEST['email'];
     $password = $_REQUEST['password'];
+    $log = "";
 
 
     require "DatabaseController.php";
@@ -25,19 +26,37 @@ $_SESSION['loginErrorMessage'] = "";
 
 // Prüfe Inhalt von Eingabe  
 if (isset($email) && isset($password)) {
-    if (verifyLogin($email, $password)) {
+
+    $status = verifyLogin($email, $password);
+    if ($status) {
         $_SESSION['email'] = $email;
         $_SESSION['loggedIn'] = true;
+
         header("Location: ../Overview.php");
     } else {
+
         $_SESSION['loginErrorMessage'] = "E-Mail oder Passwort falsch.";
         header("Location: ../login.php");
     }
+
+    $log  = writeLog($status, $email);
+
 } else {
     $_SESSION['loginErrorMessage'] = "E-Mail oder Passwort falsch.";
     header("Location: ../login.php");
-}
+
+    $log  = writeLog(false, "");
+
 }
 
+    file_put_contents('../logs/log_'.date("j.n.Y").'.txt', $log, FILE_APPEND);
+}
 
+function writeLog($status, $email){
+    return "Login".PHP_EOL.
+        "User: ".$_SERVER['REMOTE_ADDR'].' - '.date("F j, Y, g:i a").PHP_EOL.
+        "Attempt: ".($status ==true?'Success':'Failed').PHP_EOL.
+        "Email: ".$email.PHP_EOL.
+        "-------------------------".PHP_EOL;
+}
 

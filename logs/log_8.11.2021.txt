@@ -1,0 +1,15 @@
+Register
+User: ::1 - November 8, 2021, 8:14 pm
+Attempt: Success
+Email: dklfjglkdg@gmail.com
+-------------------------
+Login
+User: ::1 - November 8, 2021, 8:14 pm
+Attempt: Failed
+Email: dennis.miceli@hotmail.ch
+-------------------------
+Login
+User: ::1 - November 8, 2021, 8:14 pm
+Attempt: Success
+Email: dennis.miceli@hotmail.ch
+-------------------------
